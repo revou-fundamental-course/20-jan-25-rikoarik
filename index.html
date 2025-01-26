@@ -5,13 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/a076d85397.js"></script> 
+
 </head>
 <body>
     <nav class="navbar">
         <h1 class="navbar-title">BMI Calculator</h1>
         <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
       </nav>
-    
+      
+      <div class="container">
+        <!-- Bagian Kiri: Form -->
+        <div class="left-section">
+          <h2>Form</h2>
+          <form id="bmiForm">
+            <!-- Input Age -->
+            <div class="input-container">
+              <label for="age">Usia (Tahun):</label>
+              <input type="number" id="age" name="age" placeholder="Masukkan usia" min="1" max="120">
+            </div>
+      
+            <!-- Input Gender -->
+            <div class="input-container">
+              <label>Jenis Kelamin:</label>
+              <div>
+                <label>
+                  <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="Perempuan"> Perempuan
+                </label>
+              </div>
+            </div>
+      
+            <!-- Input Berat Badan -->
+            <div class="input-container">
+              <label for="weight">Berat Badan (kg):</label>
+              <input type="number" id="weight" name="weight" placeholder="Masukkan berat badan" min="1">
+            </div>
+      
+            <!-- Input Tinggi Badan -->
+            <div class="input-container">
+              <label for="height">Tinggi Badan (cm):</label>
+              <input type="number" id="height" name="height" placeholder="Masukkan tinggi badan" min="1">
+            </div>
+      
+            <!-- Buttons -->
+            <button type="button" class="button button-blue" id="calculateBmiBtn">Hitung BMI</button>
+            <button type="reset" class="button button-gray" id="resetBtn">Reset</button>
+          </form>
+        </div>
+      
+        <!-- Bagian Kanan: Hasil -->
+        <div class="right-section">
+          <h2>Hasil</h2>
+          <p id="output">Hasil BMI akan muncul di sini...</p>
+        </div>
+      </div>
+      
+     
+
       <script src="js/script.js"></script>
 </body>
+
 </html>
