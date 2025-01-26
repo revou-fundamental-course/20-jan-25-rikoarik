@@ -8,8 +8,15 @@
   /* General Styles */
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .container {
+    margin-top: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
   }
   
   .navbar {
@@ -28,13 +35,6 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .container {
-    margin-top: 130px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
   
   /* Left and Right Sections */
   .left-section,
@@ -170,6 +170,7 @@ button {
     background: none;
     border: none;
     font-size: 24px;
+    border-radius: 100px;
     cursor: pointer;
     transition: transform 0.2s ease;
   }
@@ -213,7 +214,7 @@ button {
     .input-container label {
       font-size: 14px;
     }
-    
+
     button {
         padding: 10px 16px;
         font-size: 14px;
