@@ -1,7 +1,7 @@
 :root {
-    --bg-color-light: #f2f2f2;
-    --text-color-light: #000000;
-    --bg-color-dark: #211c1c;
+    --bg-color-light: #f2f2f27c;
+    --text-color-light: #393939;
+    --bg-color-dark: #2322229c;
     --text-color-dark: #f8f8f8;
   }
   
@@ -10,27 +10,30 @@
     margin: 0;
     font-family: "Poppins", serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
   }
   .container {
-    margin-top: 130px;
+    margin-top: 120px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 14px;
     padding: 20px;
   }
   
   .navbar {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    right: 20px;
+    top: 14px;
+    left: 14px;
+    right: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
-    box-shadow: 0 8px 12px rgba(160, 160, 160, 0.764);
+    box-shadow: 10 8px 1px rgba(160, 160, 160, 0.764);
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -99,7 +102,6 @@ button {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   /* Blue Button */
@@ -170,7 +172,7 @@ button {
     background: none;
     border: none;
     font-size: 24px;
-    border-radius: 100px;
+    border-radius: 100;
     cursor: pointer;
     transition: transform 0.2s ease;
   }
