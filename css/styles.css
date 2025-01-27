@@ -145,6 +145,15 @@ button {
     cursor: not-allowed;
     box-shadow: none;
   }
+
+  .bmiChart {
+    margin: 20px 0;
+    max-width: 100%;
+    background-color: var(--bg-color-light);
+    border-radius: 10px;
+  }
+  
+
   
   /* Dark Mode Styles */
   body.dark-mode {
@@ -184,6 +193,14 @@ button {
   body.dark-mode .dark-mode-btn {
     color: #fff;
   }
+
+  .bmiChart .dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+  }
+
+
+
   
   /* Responsive Styles */
   @media (max-width: 768px) {
