@@ -7,6 +7,24 @@ darkModeToggle.addEventListener('click', () => {
   darkModeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
+//function reset 
+document.getElementById("resetBtn").addEventListener("click", function () {
+  // Reset the form inputs
+  document.getElementById("age").value = "";
+  document.querySelector('input[name="gender"]:checked').checked = false;
+  document.getElementById("weight").value = "";
+  document.getElementById("height").value = "";
+
+  // Reset the result and chart
+  document.getElementById("result").innerHTML = "Hasil BMI akan muncul di sini...";
+  const ctx = document.getElementById('bmiChart').getContext('2d');
+  if (window.bmiChart instanceof Chart) {
+    window.bmiChart.destroy();
+  }
+  createOrUpdateChart(null);
+  displayInformation(null);
+});
+
 document.getElementById("calculateBmiBtn").addEventListener("click", function () {
   // Ambil elemen input
   const ageInput = document.getElementById("age");
