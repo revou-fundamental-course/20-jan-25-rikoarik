@@ -30,7 +30,7 @@ BMI Calculator adalah aplikasi berbasis web sederhana yang dirancang untuk mengh
         git clone https://github.com/username/bmi-calculator.git
         cd bmi-calculator
     ```
-    
+
 2. **Buka File**:
 
    - Klik dua kali file index.html untuk membuka aplikasi di browser Anda.
@@ -56,11 +56,13 @@ BMI Calculator adalah aplikasi berbasis web sederhana yang dirancang untuk mengh
 
 ## 🎨 Struktur Folder
 
-bmi-calculator/
-│
-├── index.html          # Halaman utama
-├── css/
-│   └── styles.css      # File CSS untuk styling
-├── js/
-│   └── script.js       # Logika dan interaksi JavaScript
-└── README.md           # Dokumentasi proyek
+    ```
+        bmi-calculator/
+        │
+        ├── index.html          # Halaman utama
+        ├── css/
+        │   └── styles.css      # File CSS untuk styling
+        ├── js/
+        │   └── script.js       # Logika dan interaksi JavaScript
+        └── README.md           # Dokumentasi proyek
+    ```    
