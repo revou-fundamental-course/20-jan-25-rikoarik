@@ -56,7 +56,7 @@ BMI Calculator adalah aplikasi berbasis web sederhana yang dirancang untuk mengh
 
 ## 🎨 Struktur Folder
 
-    ```
+    ```bash
         bmi-calculator/
         │
         ├── index.html          # Halaman utama
