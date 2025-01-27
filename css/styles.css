@@ -148,12 +148,18 @@ button {
 
   .bmiChart {
     margin: 20px 0;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 2 / 1; 
     background-color: var(--bg-color-light);
     border-radius: 10px;
+    overflow: hidden; 
   }
   
-
+  .bmiChart canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
   
   /* Dark Mode Styles */
   body.dark-mode {
@@ -199,8 +205,6 @@ button {
     color: var(--text-color-light);
   }
 
-
-
   
   /* Responsive Styles */
   @media (max-width: 768px) {
@@ -232,6 +236,10 @@ button {
   
     .input-container label {
       font-size: 14px;
+    }
+
+    .bmiChart canvas {
+      max-width: 400px; 
     }
 
     button {
