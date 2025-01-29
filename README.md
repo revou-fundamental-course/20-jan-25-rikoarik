@@ -4,6 +4,10 @@ BMI Calculator adalah aplikasi berbasis web sederhana yang dirancang untuk mengh
 
 ---
 
+## Live Demo
+
+You can view the live version of the application [here](https://revou-fundamental-course.github.io/20-jan-25-rikoarik/).
+
 ## ✨ Fitur
 
 - **Hitung BMI Secara Instan**: Masukkan usia, jenis kelamin, berat badan, dan tinggi badan untuk menghitung BMI Anda.
