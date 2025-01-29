@@ -31,8 +31,8 @@ You can view the live version of the application [here](https://revou-fundamenta
    Jalankan perintah berikut di terminal Anda untuk mengkloning repositori:
 
     ```bash
-        git clone https://github.com/username/bmi-calculator.git
-        cd bmi-calculator
+        git clone https://github.com/revou-fundamental-course/20-jan-25-rikoarik.git
+        cd 20-jan-25-rikoarik
     ```
 
 2. **Buka File**:
