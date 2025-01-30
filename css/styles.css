@@ -1,250 +1,301 @@
 :root {
-    --bg-color-light: #f2f2f27c;
-    --text-color-light: #393939;
-    --bg-color-dark: #2322229c;
-    --text-color-dark: #f8f8f8;
-  }
-  
-  /* General Styles */
-  body {
-    margin: 0;
-    font-family: "Poppins", serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  /* Variabel untuk mode terang dan gelap */
+  --bg-color-light: #f2f2f27c; /* Warna latar belakang mode terang */
+  --text-color-light: #393939; /* Warna teks mode terang */
+  --bg-color-dark: #2322229c; /* Warna latar belakang mode gelap */
+  --text-color-dark: #f8f8f8; /* Warna teks mode gelap */
+}
 
-  }
-  .container {
-    margin-top: 120px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    padding: 20px;
-  }
-  
+/* Gaya umum */
+body {
+  margin: 0;
+  font-family: "Poppins", serif; /* Menggunakan font Poppins */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi warna */
+  background-color: #4158D0; /* Warna default */
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); /* Gradasi warna sebagai latar belakang */
+}
+
+.container {
+  margin-top: 120px; /* Jarak dari atas */
+  display: flex;
+  flex-wrap: wrap; /* Memungkinkan elemen turun ke baris baru */
+  gap: 14px; /* Jarak antar elemen */
+  padding: 20px;
+}
+
+/* Navigasi */
+.navbar {
+  position: fixed;
+  top: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between; /* Menjadikan elemen tersebar di sisi kiri dan kanan */
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  box-shadow: 10 8px 1px rgba(160, 160, 160, 0.764); /* Efek bayangan */
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transisi warna */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transisi ketika navbar muncul */
+  transform: translateY(0); /* Posisi default navbar */
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateY(-100%); /* Sembunyikan navbar ke atas */
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Bagian kiri dan kanan */
+.left-section,
+.right-section {
+  flex: 1 1 45%; /* Masing-masing mengambil 45% lebar container */
+  padding: 20px;
+  background-color: var(--bg-color-light);
+  border-radius: 10px;
+  color: var(--text-color-light);
+  box-shadow: 0 8px 12px rgba(160, 160, 160, 0.764); /* Efek bayangan */
+}
+
+/* Judul Navbar */
+.navbar-title {
+  font-size: 24px;
+}
+
+/* Gaya input */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Label input */
+.input-container label {
+  font-size: 16px;
+  color: var(--text-color-light);
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Input angka */
+.input-container input[type="number"] {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: var(--text-color-light);
+  border: 2px solid var(--text-color-light);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek hover pada input */
+.input-container input[type="number"]:hover {
+  border-color: var(--text-color-light);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek focus pada input */
+.input-container input[type="number"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--bg-color-light); /* Warna latar belakang sesuai dengan mode terang */
+  color: var(--text-color-light); /* Warna teks sesuai mode terang */
+  text-align: center; /* Teks berada di tengah */
+  padding: 20px;
+  position: relative; /* Posisi relatif untuk menjaga layout */
+  margin-top: 40px; /* Memberi jarak dari konten di atas */
+  font-size: 16px;
+  box-shadow: 0 -4px 6px rgba(160, 160, 160, 0.5); /* Efek bayangan di atas */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transisi warna */
+}
+
+/* Gaya tombol umum */
+button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Tombol biru */
+.button-blue {
+  background-color: #007BFF; /* Warna biru utama */
+  color: #fff;
+}
+
+/* Efek hover pada tombol biru */
+.button-blue:hover {
+  background-color: #0056d2;
+}
+
+/* Efek fokus pada tombol biru */
+.button-blue:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol biru saat dinonaktifkan */
+.button-blue:disabled {
+  background-color: #a3d0ff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Tombol abu-abu */
+.button-gray {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Efek hover pada tombol abu-abu */
+.button-gray:hover {
+  background-color: #565e64;
+}
+
+/* Efek fokus pada tombol abu-abu */
+.button-gray:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
+}
+
+/* Tombol abu-abu saat dinonaktifkan */
+.button-gray:disabled {
+  background-color: #c0c4c7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Grafik BMI */
+.bmiChart {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 2 / 1;
+  background-color: var(--bg-color-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Menyesuaikan ukuran canvas */
+.bmiChart canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Mode Gelap */
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Mode gelap untuk elemen lainnya */
+body.dark-mode .navbar,
+body.dark-mode .left-section,
+body.dark-mode .right-section {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .input-container input[type="number"] {
+  border-color: #ccc;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .input-container label {
+  color: var(--text-color-dark);
+}
+
+/* Tombol mode gelap */
+.dark-mode-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  border-radius: 100;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Efek hover pada tombol mode gelap */
+.dark-mode-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Warna ikon tombol mode gelap */
+body.dark-mode .dark-mode-btn {
+  color: #fff;
+}
+
+/* Grafik BMI dalam mode gelap */
+.bmiChart .dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-light);
+}
+
+/* Footer untuk mode gelap */
+body.dark-mode .footer {
+  background-color: var(--bg-color-dark); /* Warna latar belakang mode gelap */
+  color: var(--text-color-dark); /* Warna teks mode gelap */
+}
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
   .navbar {
-    position: fixed;
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 32px;
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-    box-shadow: 10 8px 1px rgba(160, 160, 160, 0.764);
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 12px 16px;
   }
-  
-  
-  /* Left and Right Sections */
+
+  .navbar-title {
+      font-size: 20px;
+  }
+
+  .dark-mode-btn {
+      font-size: 20px;
+  }
+
+  .container {
+      flex-direction: column;
+  }
+
   .left-section,
   .right-section {
-    flex: 1 1 45%;
-    padding: 20px;
-    background-color: var(--bg-color-light);
-    border-radius: 10px;
-    color: var(--text-color-light);
-    box-shadow: 0 8px 12px rgba(160, 160, 160, 0.764);
-  }
-  
-  .navbar-title {
-    font-size: 24px;
-  }
-  
-  /* Input Container Styles */
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .input-container label {
-    font-size: 16px;
-    color: var(--text-color-light);
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  .input-container input[type="number"] {
-    padding: 12px 16px;
-    font-size: 16px;
-    color: var(--text-color-light);
-    border: 2px solid var(--text-color-light);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input-container input[type="number"]:hover {
-    border-color: var(--text-color-light);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
-  }
-  
-  .input-container input[type="number"]:focus {
-    outline: none;
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-
-/* General Button Styles */
-button {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  /* Blue Button */
-  .button-blue {
-    background-color: #007BFF; /* Primary Blue */
-    color: #fff;
-  }
-  
-  .button-blue:hover {
-    background-color: #0056d2; /* Darker Blue on Hover */
-  }
-  
-  .button-blue:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  .button-blue:disabled {
-    background-color: #a3d0ff; /* Light Blue */
-    cursor: not-allowed;
-    box-shadow: none;
-  }
-  
-  /* Gray Button */
-  .button-gray {
-    background-color: #6c757d; /* Neutral Gray */
-    color: #fff;
-  }
-  
-  .button-gray:hover {
-    background-color: #565e64; /* Darker Gray on Hover */
-  }
-  
-  .button-gray:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
-  }
-  
-  .button-gray:disabled {
-    background-color: #c0c4c7; /* Light Gray */
-    cursor: not-allowed;
-    box-shadow: none;
-  }
-
-  .bmiChart {
-    margin: 20px 0;
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 2 / 1; 
-    background-color: var(--bg-color-light);
-    border-radius: 10px;
-    overflow: hidden; 
-  }
-  
-  .bmiChart canvas {
-    width: 100% !important;
-    height: 100% !important;
-  }
-  
-  /* Dark Mode Styles */
-  body.dark-mode {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-  }
-  
-  body.dark-mode .navbar,
-  body.dark-mode .left-section,
-  body.dark-mode .right-section {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-  }
-  
-  body.dark-mode .input-container input[type="number"] {
-    border-color: #ccc;
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  body.dark-mode .input-container label {
-    color: var(--text-color-dark);
-  }
-  
-  .dark-mode-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    border-radius: 100;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .dark-mode-btn:hover {
-    transform: scale(1.1);
-  }
-  
-  body.dark-mode .dark-mode-btn {
-    color: #fff;
-  }
-
-  .bmiChart .dark-mode {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-light);
-  }
-
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 12px 16px;
-    }
-  
-    .navbar-title {
-      font-size: 20px;
-    }
-  
-    .dark-mode-btn {
-      font-size: 20px;
-    }
-  
-    .container {
-      flex-direction: column;
-    }
-  
-    .left-section,
-    .right-section {
       flex: 1 1 100%;
-    }
-  
-    .input-container input[type="number"] {
+  }
+
+  .input-container input[type="number"] {
       font-size: 14px;
       padding: 10px 14px;
-    }
-  
-    .input-container label {
-      font-size: 14px;
-    }
-
-    .bmiChart canvas {
-      max-width: 400px; 
-    }
-
-    button {
-        padding: 10px 16px;
-        font-size: 14px;
-      }
   }
-  
+
+  .input-container label {
+      font-size: 14px;
+  }
+
+  .bmiChart canvas {
+      max-width: 400px;
+  }
+
+  button {
+      padding: 10px 16px;
+      font-size: 14px;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 15px;
+}
+}
